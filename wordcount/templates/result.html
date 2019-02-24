@@ -1,0 +1,21 @@
+{% load static %}
+<head>
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+<h1>wordcount result</h1>
+<h2>insert text number is {{length}}</h2>
+
+<a href="{%url 'home'%}">go back home</a>
+
+<h3>insert text</h3>
+<!--입력한 전체 텍스트 -->
+<div id=content>{{fulltext}}</div>
+
+
+<h3>word count</h3>
+{%for wd, howmany in dict%}
+<div id=content>{{wd}}:{{howmany}}</div>
+<br>
+{%endfor%}
+</body>
